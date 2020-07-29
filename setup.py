@@ -50,9 +50,7 @@ extensions = []
 # Specific Fortran extensions
 ext_fortran = {
     "package1._sources": {
-        "sources": [f"package1/_src/{f}" for f in
-                    ("hello_world.f90")
-        ],
+        "sources": ["package1/_src/hello_world.f90"]
     },
 }
 
@@ -94,6 +92,7 @@ metadata = dict(
     packages=find_packages(include=["package1", "package1.*"]),
     ext_modules=extensions,
     cmdclass=cmdclass,
+    zip_safe=False,
     **setuptools_kwargs
 )
 
