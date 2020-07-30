@@ -1,3 +1,3 @@
 subroutine hello_world()
-print *,"tshetsh"
-end
+  print *,"from fortran"
+end subroutine hello_world
